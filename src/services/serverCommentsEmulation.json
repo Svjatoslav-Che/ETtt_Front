@@ -1,0 +1,30 @@
+[
+  {
+    "commentID": 1,
+    "userName": "Kate",
+    "userToken": "ad1",
+    "commentText": "It’s been years since I’ve had a cat in the house, but don’t let that fool you — I’m a cat lady, through and through. Since age five, I’ve been blessed with kittens that I’ve chosen by hand, strays that adopted me, and a handful of other feline friends I cohabitated with, to varying degrees of affection and success.",
+    "assessment": 10
+  },
+  {
+    "commentID": 2,
+    "userName": "Moe",
+    "userToken": "egy1884x1z2r65psd3fo",
+    "commentText": "The cats I’ve loved have been impudent, sneaky, defiant, cuddly, frisky, fierce, lazy, and sometimes downright bad — but I’ve loved them all the same. And since so many others — and so many authors — feel similarly, there’s a whole host of books built around the feline species for us and our kids to enjoy.",
+    "assessment": 10
+  },
+  {
+    "commentID": 3,
+    "userName": "Toddy",
+    "userToken": "ad1",
+    "commentText": "On a lovely fine day, with sun filling the sky,\nTwo neighbor cats met in a garden nearby.\nIn lovely warm weather, well past winter’s gloom,\nSoaking up spring with its flowers in bloom.",
+    "assessment": -10
+  },
+  {
+    "commentID": 4,
+    "userName": "Annet",
+    "userToken": "ad1",
+    "commentText": "My toddler loves kitty cats and whenever she sees them she will call them meow meows.",
+    "assessment": 10
+  }
+]
