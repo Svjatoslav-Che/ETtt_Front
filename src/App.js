@@ -39,11 +39,9 @@ class App extends Component {
   async init() {
     this.checkCookies();
     const serverContents = await getServerComments();
-
     if (serverContents) {
       this.setState({serverResponded: true, serverContents});
     }
-    console.log(serverContents.result);
   }
 
   async callback() {

@@ -15,11 +15,11 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import {putCommentToServer} from '../../services/putCommentToServer';
 import Form from 'react-bootstrap/Form';
 import {getServerCommentsParentId} from '../../services/getServerCommentsParentId';
-import CommentMainBlockShadow from '../commentMainBlockShadow/commentMainBlockShadow';
+import CommentMainBlock from '../commentMainBlock/commentMainBlock';
 
 const cookies = new Cookies();
 
-class CommentMainBlock extends Component {
+class CommentMainBlockShadow extends Component {
   state = {
     commentBox: false,
     textValue: '',
@@ -130,7 +130,7 @@ class CommentMainBlock extends Component {
 
               {(this.state.serverResponde) ?
                 this.state.serverContentsParentId.result.map((data, i) =>
-                  <CommentMainBlockShadow key={data.id} data={data} callback={this.props.callback}/>)
+                  <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/>)
                 : ''
               }
 
@@ -186,7 +186,7 @@ class CommentMainBlock extends Component {
 
             {(this.state.serverResponde) ?
               this.state.serverContentsParentId.result.map((data, i) =>
-                <CommentMainBlockShadow key={data.id} data={data} callback={this.props.callback}/>)
+                <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/>)
               : ''
             }
 
@@ -200,4 +200,4 @@ class CommentMainBlock extends Component {
 
 const mapStateToProps = state => ({authenticationRedux: state.authenticationRedux});
 
-export default connect(mapStateToProps)(CommentMainBlock);
+export default connect(mapStateToProps)(CommentMainBlockShadow);

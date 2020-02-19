@@ -23,7 +23,8 @@ class CommentsContainer extends Component {
     putCommentToServer(
       (cookies.get('UserName')) ? cookies.get('UserName') : 'anonymus',
       cookies.get('UserToken'),
-      this.state.textValue
+      this.state.textValue,
+      null
     )
     await this.props.callback();
   }
@@ -56,7 +57,11 @@ class CommentsContainer extends Component {
             <div/>}
           <br/>
         </Form>
-        {this.props.data.map((data, i) => <CommentMainBlock key={i} data={data} callback={this.props.callback}/>)}
+        {this.props.data.map((data, i) =>
+          (data.parentId === null) ?
+            <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/> : <div key={i}/>
+        )}
+        <br/><br/>
       </Col>
     );
   }
@@ -65,3 +70,8 @@ class CommentsContainer extends Component {
 const mapStateToProps = state => ({authenticationRedux: state.authenticationRedux});
 
 export default connect(mapStateToProps)(CommentsContainer);
+
+// {this.props.data.map((data, i) =>
+//   (data.parentId === null) ?
+//     <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/> : <div/>
+// )}

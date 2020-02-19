@@ -1,4 +1,4 @@
-export async function putCommentToServer(inUserName, inUserToken, inCommentText) {
+export async function putCommentToServer(inUserName, inUserToken, inCommentText, inParentId) {
   fetch('http://178.62.45.138:3001/comments', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
@@ -6,6 +6,7 @@ export async function putCommentToServer(inUserName, inUserToken, inCommentText)
       userName: inUserName,
       userToken: inUserToken,
       commentText: inCommentText,
+      parentId: inParentId,
     }),
   });
 }
