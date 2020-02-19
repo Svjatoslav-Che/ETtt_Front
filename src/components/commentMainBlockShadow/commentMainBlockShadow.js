@@ -182,14 +182,13 @@ class CommentMainBlockShadow extends Component {
               </Form>
               <br/>
 
+              {(this.state.serverResponde) ?
+                this.state.serverContentsParentId.result.map((data, i) =>
+                  <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/>)
+                : ''
+              }
+
             </Media.Body>
-
-            {(this.state.serverResponde) ?
-              this.state.serverContentsParentId.result.map((data, i) =>
-                <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/>)
-              : ''
-            }
-
           </Media>
         }
 
