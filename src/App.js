@@ -42,7 +42,7 @@ class App extends Component {
     const serverContents = await getServerComments();
     if (serverContents) {
       this.setState({serverResponded: true, serverContents: serverContents});
-      sKey = Math.floor(Math.random() * 99999999);
+      sKey = Math.floor(Math.random() * 99999999); //simple DIV-key generator
     }
   }
 
@@ -51,17 +51,8 @@ class App extends Component {
     this.init();
   }
 
-
   componentDidMount() {
     this.init();
-    // setInterval(
-    //   () => {
-    //     if (this.props.needToRerender) {
-    //       this.props.NEEDTORERENDER(false);
-    //       this.init();
-    //     }
-    //   },
-    //   100)
   }
 
   render() {
@@ -81,7 +72,6 @@ class App extends Component {
             <AlertMessage variant={'info'} message={'Awaiting server response'}/>}
         </Container>
         <br/><br/>
-        {/*{(this.props.needToRerender === true) ? this.init : ''}*/}
         <Bottom/>
       </div>
     );
@@ -90,12 +80,10 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   authenticationRedux: state.authenticationRedux,
-  needToRerender: state.needToRerender,
 });
 
 const mapDispachToProps = dispatch => ({
   AUTHENTIFICATION: variable => dispatch({type: 'AUTHENTIFICATION', value: variable}),
-  NEEDTORERENDER: variable => dispatch({type: 'NEEDTORERENDER', value: variable}),
 });
 
 export default connect(mapStateToProps, mapDispachToProps)(App);
