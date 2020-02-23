@@ -1,70 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70902afd-faf3-4bb7-b0d1-b50e2f040edc" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="55020c2e-a1ba-4b43-8825-df319c8f2204" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBowerSettings">
-    <node-interpreter value="project" />
-    <bower-package value="" />
-    <bower.json value="" />
+  <component name="ProjectId" id="1YDRozsooxoaiZxxNAk9Yl62mEP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectId" id="1XkvUVgMHMRSPUt2oxgWWti9qMh" />
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.jscs" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.detected.package.stylelint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.jscs" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.path.for.package.stylelint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
-    <property name="node.js.selected.package.jscs" value="" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="node.js.selected.package.stylelint" value="" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt\src\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt\src\components\commentMainBlockShadow" />
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt\src\components\commentsContainerShadow" />
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt\src\services" />
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt\src\assets\images" />
-      <recent name="C:\Users\Svjatoslav\WebstormProjects\et_tt" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -79,60 +39,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.npm start">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="70902afd-faf3-4bb7-b0d1-b50e2f040edc" name="Default Changelist" comment="" />
-      <created>1581602922771</created>
+      <changelist id="55020c2e-a1ba-4b43-8825-df319c8f2204" name="Default Changelist" comment="" />
+      <created>1582475357690</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581602922771</updated>
-      <workItem from="1581602924722" duration="20342000" />
-      <workItem from="1581626730468" duration="26694000" />
-      <workItem from="1581668585059" duration="10863000" />
-      <workItem from="1581702390604" duration="7925000" />
-      <workItem from="1581725103389" duration="28781000" />
-      <workItem from="1581771905057" duration="813000" />
-      <workItem from="1581773007677" duration="25853000" />
-      <workItem from="1582037304461" duration="392000" />
-      <workItem from="1582037723526" duration="66000" />
-      <workItem from="1582041090367" duration="18549000" />
-      <workItem from="1582096466995" duration="611000" />
-      <workItem from="1582107021837" duration="1329000" />
+      <updated>1582475357690</updated>
+      <workItem from="1582475359021" duration="1568000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="554" y="317" width="683" height="486" key="find.popup" timestamp="1582476715856">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="554" y="317" width="683" height="486" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1582476715856" />
   </component>
 </project>

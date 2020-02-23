@@ -1,5 +1,6 @@
 const initialState = {
-  authenticationRedux: false
+  authenticationRedux: false,
+  needToRerender: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -9,6 +10,10 @@ const reducer = (state = initialState, action) => {
 
     case 'AUTHENTIFICATION':
       newState.authenticationRedux = action.value;
+      break;
+
+    case 'NEEDTORERENDER':
+      newState.needToRerender = action.value;
       break;
 
   }

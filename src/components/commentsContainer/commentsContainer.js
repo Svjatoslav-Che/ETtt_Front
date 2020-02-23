@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import CommentMainBlock from '../commentMainBlock/commentMainBlock';
 import Col from 'react-bootstrap/Col';
@@ -6,8 +6,8 @@ import FormControl from 'react-bootstrap/FormControl';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {connect} from 'react-redux';
-import {putCommentToServer} from '../../services/putCommentToServer'
+import { connect } from 'react-redux';
+import { putCommentToServer } from '../../services/putCommentToServer'
 
 const cookies = new Cookies();
 
@@ -17,6 +17,10 @@ class CommentsContainer extends Component {
     commentsShown: 0,
     contentStrip: [],
     textValue: '',
+  }
+
+  constructor(props) {
+    super(props);
   }
 
   leaveCommentButtonClicked = async () => {
@@ -30,12 +34,12 @@ class CommentsContainer extends Component {
   }
 
   updateInputValue(e) {
-    this.setState({textValue: e.target.value});
+    this.setState({ textValue: e.target.value });
   }
 
   render() {
     return (
-      <Col md={{span: 6, offset: 3}}>
+      <Col md={{ span: 6, offset: 3 }}>
         <Form>
           {(this.props.authenticationRedux) ?
             <div>
@@ -59,7 +63,12 @@ class CommentsContainer extends Component {
         </Form>
         {this.props.data.map((data, i) =>
           (data.parentId === null) ?
-            <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/> : <div key={i}/>
+            <CommentMainBlock
+              key={data.id + this.props.sKey}
+              data={data}
+              callback={this.props.callback}
+              sKey={this.props.sKey}
+            /> : ''
         )}
         <br/><br/>
       </Col>
@@ -67,11 +76,8 @@ class CommentsContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({authenticationRedux: state.authenticationRedux});
+const mapStateToProps = state => ({
+  authenticationRedux: state.authenticationRedux,
+});
 
 export default connect(mapStateToProps)(CommentsContainer);
-
-// {this.props.data.map((data, i) =>
-//   (data.parentId === null) ?
-//     <CommentMainBlock key={data.id} data={data} callback={this.props.callback}/> : <div/>
-// )}

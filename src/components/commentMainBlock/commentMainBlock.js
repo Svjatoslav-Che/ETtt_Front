@@ -27,9 +27,10 @@ class CommentMainBlock extends Component {
     serverResponde: false,
   }
 
-  callback() {
-    this.props.callback();
+  constructor(props) {
+    super(props);
   }
+
 
   leaveCommentButtonClicked = async () => {
     putCommentToServer(
@@ -184,7 +185,12 @@ class CommentMainBlock extends Component {
 
               {(this.state.serverResponde) ?
                 this.state.serverContentsParentId.result.map((data, i) =>
-                  <CommentMainBlockShadow key={data.id} data={data} callback={this.props.callback}/>)
+                  <CommentMainBlockShadow
+                    key={data.id + this.props.sKey}
+                    data={data}
+                    sKey={this.props.sKey}
+                    callback={this.props.callback}
+                  />)
                 : ''
               }
 
@@ -197,6 +203,12 @@ class CommentMainBlock extends Component {
   }
 }
 
-const mapStateToProps = state => ({authenticationRedux: state.authenticationRedux});
+const mapStateToProps = state => ({
+  authenticationRedux: state.authenticationRedux,
+});
 
-export default connect(mapStateToProps)(CommentMainBlock);
+const mapDispachToProps = dispatch => ({
+  AUTHENTIFICATION: variable => dispatch({type: 'AUTHENTIFICATION', value: variable}),
+});
+
+export default connect(mapStateToProps, mapDispachToProps)(CommentMainBlock);

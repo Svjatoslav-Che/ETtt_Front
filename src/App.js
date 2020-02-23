@@ -13,16 +13,17 @@ import {connect} from 'react-redux';
 
 const cookies = new Cookies();
 let visitedState = false;
+let sKey = 0;
 
 class App extends Component {
   state = {
     serverResponded: false,
     serverContents: null,
+    innerKey: 0,
   }
 
   constructor(props) {
     super(props);
-
     this.callback = this.callback.bind(this);
   }
 
@@ -40,16 +41,27 @@ class App extends Component {
     this.checkCookies();
     const serverContents = await getServerComments();
     if (serverContents) {
-      this.setState({serverResponded: true, serverContents});
+      this.setState({serverResponded: true, serverContents: serverContents});
+      sKey = Math.floor(Math.random() * 99999999);
     }
   }
 
   async callback() {
+    console.log('callback run')
     this.init();
   }
 
+
   componentDidMount() {
     this.init();
+    // setInterval(
+    //   () => {
+    //     if (this.props.needToRerender) {
+    //       this.props.NEEDTORERENDER(false);
+    //       this.init();
+    //     }
+    //   },
+    //   100)
   }
 
   render() {
@@ -60,11 +72,16 @@ class App extends Component {
           {(this.state.serverResponded) ?
             <div>
               <Statistic data={this.state.serverContents.result} uservisit={visitedState}/>
-              <CommentsContainer data={this.state.serverContents.result} callback={this.callback}/>
+              <CommentsContainer
+                data={this.state.serverContents.result}
+                callback={this.callback}
+                sKey={sKey}
+              />
             </div> :
             <AlertMessage variant={'info'} message={'Awaiting server response'}/>}
         </Container>
         <br/><br/>
+        {/*{(this.props.needToRerender === true) ? this.init : ''}*/}
         <Bottom/>
       </div>
     );
@@ -72,14 +89,13 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  authenticationRedux: state.authenticationRedux
+  authenticationRedux: state.authenticationRedux,
+  needToRerender: state.needToRerender,
 });
 
 const mapDispachToProps = dispatch => ({
-  AUTHENTIFICATION: variable => dispatch({
-    type: 'AUTHENTIFICATION',
-    value: variable
-  })
+  AUTHENTIFICATION: variable => dispatch({type: 'AUTHENTIFICATION', value: variable}),
+  NEEDTORERENDER: variable => dispatch({type: 'NEEDTORERENDER', value: variable}),
 });
 
 export default connect(mapStateToProps, mapDispachToProps)(App);
